@@ -11,7 +11,8 @@
 <body>
     <div class="calculator">
         <div class="calculator__screen">
-
+            <div class="calculator__screen__output-top" id="outputTop"></div>
+            <div class="calculator__screen__output-bottom" id="outputBottom">0</div>
         </div>
         <div class="calculator__buttons">
             <button class="backSpace">Del</button>
@@ -23,31 +24,31 @@
             <button class="percent">%</button>
             <button class="bracketOpen">(</button>
             <button class="bracketClose">)</button>
-            <button class="num">9</button>
-
-            <button class="num">8</button>
-            <button class="num">7</button>
+            <button class="num" data-number="9">9</button>
+            <button class="num" data-number="8">8</button>
+            <button class="num" data-number="7">7</button>
             <button class="square">x2</button>
             <button class="power">xy</button>
-            <button class="num">6</button>
-            <button class="num">5</button>
+            <button class="num" data-number="6">6</button>
+            <button class="num" data-number="5">5</button>
 
-            <button class="num">4</button>
+            <button class="num" data-number="4">4</button>
             <button class="cube">x3</button>
             <button class="powerOfTen">10x</button>
-            <button class="num">3</button>
+            <button class="num" data-number="3">3</button>
 
-            <button class="num">2</button>
+            <button class="num" data-number="2">2</button>
 
-            <button class="num">1</button>
+            <button class="num" data-number="1">1</button>
             <div class="operators">
                 <button class="subtraction">-</button>
                 <button class="add">+</button>
                 <button class="sum">=</button>
             </div>
-            <button class="num zero">0</button>
-            <button class="num dot">.</button>
+            <button class="num zero" data-number="0">0</button>
+            <button class="num dot" data-number=".">.</button>
         </div>
     </div>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
