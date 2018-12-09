@@ -1,6 +1,7 @@
 const Calculator = {
     outputTop    : document.querySelector("#outputTop"),
     outputBottom : document.querySelector("#outputBottom"),
+    clearBtn     : document.querySelector(".clear"),
     numbers      : document.querySelectorAll(".num"),
     operators    : ["division","multiplication","bracketOpen","bracketClose","subtraction","add"],
     sumBtn       : document.querySelector(".sum"),
@@ -16,8 +17,6 @@ const Calculator = {
         Calculator.outputTop.innerHTML = Calculator.output;
     },
     calculation: function () {
-        // let left = 0;
-        // let right = 0;
 
         //Multiplication
         while(Calculator.output.indexOf("*") > 0) {
@@ -144,6 +143,7 @@ const Calculator = {
             tempOutputArr.splice(startIndex,endIndex);
             let joinTempArr = tempOutputArr.join("");
             Calculator.output = joinTempArr;
+            console.log(joinTempArr +" joinTempArr")
             console.log(totalSum)
             Calculator.outputBottom.innerHTML = totalSum;
             console.log(endIndex +" endindex")
@@ -188,6 +188,7 @@ const Calculator = {
             tempOutputArr.splice(startIndex,endIndex);
             let joinTempArr = tempOutputArr.join("");
             Calculator.output = joinTempArr;
+            console.log(joinTempArr +" joinTempArr")
             console.log(totalSum)
             Calculator.outputBottom.innerHTML = totalSum;
             console.log(endIndex +" endindex")
@@ -199,6 +200,11 @@ const Calculator = {
             startIndex = 0;
             endIndex = 0;
         }
+    },
+    clearScreen: function () {
+        Calculator.outputTop.innerHTML = "";
+        Calculator.outputBottom.innerHTML = "0";
+        Calculator.output = "";
     }
 };
 
@@ -219,4 +225,4 @@ Calculator.operators.forEach((element) => {
 
 Calculator.sumBtn.addEventListener("click",Calculator.calculation);
 
-
+Calculator.clearBtn.addEventListener("click",Calculator.clearScreen);
